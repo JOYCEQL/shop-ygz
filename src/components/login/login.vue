@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   data () {
     return {
@@ -47,7 +46,7 @@ export default {
           return false
         }
         // 发送请求
-        const res = await axios.post('http://localhost:8888/api/private/v1/login', this.form)
+        const res = await this.$http.post('http://localhost:8888/api/private/v1/login', this.form)
         const { data, meta } = res.data
         if (meta.status === 200) {
           // 存储token
