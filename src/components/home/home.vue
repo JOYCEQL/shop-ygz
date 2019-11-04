@@ -1,6 +1,6 @@
 <template>
  <div class="">
-
+   {{这是home}}}
  </div>
 </template>
 
