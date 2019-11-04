@@ -1,6 +1,8 @@
 <template>
  <div class="login" >
     <el-form ref="form" :model="form" :rules="Loginformrules" status-icon label-width="80px">
+         <h2>用户登录</h2>
+
   <el-form-item label="用户名"  prop="username">
     <el-input v-model="form.username"></el-input>
   </el-form-item>
@@ -41,6 +43,7 @@ export default {
     login () {
       this.$refs.form.validate(async (valid) => {
         if (!valid) {
+          // this.$refs.form.setAttribute('status-icon', false)
           return false
         }
         // 发送请求
@@ -67,10 +70,14 @@ export default {
 <style lang="less" scoped>
 .login{
   height: 100%;
-  background: url('../../assets/猫.jpg') no-repeat;
-  background-size: cover ;
+  background: url('../../assets/天使.png') no-repeat;
+  background-size: cover;
   overflow: hidden;
   .el-form {
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
   padding: 40px 30px 20px 10px;
   margin-top: 200px;
   margin-left: 65%;

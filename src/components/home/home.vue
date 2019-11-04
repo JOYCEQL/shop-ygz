@@ -1,6 +1,6 @@
 <template>
  <div class="">
-    {{msg}}
+
  </div>
 </template>
 
@@ -8,7 +8,6 @@
 export default {
   data () {
     return {
-      msg: '欢迎来到home组件'
     }
   }
 }
